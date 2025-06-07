@@ -1,0 +1,7 @@
+PORT=
+MONGODB_STRING=
+
+JWT_SECRET_KEY=
+
+ClientID=
+Clientsecret=

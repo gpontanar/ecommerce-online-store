@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.text-orange {
+    color: orange;
+    font-size: 1.0rem;
+}
+ 
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    justify-content: flex-end; /* Push the content to the bottom */
+    height: 20%; /* Ensure the footer takes up the remaining space */
+}
+.login-to-cart-btn {
+    background-color: #FF8C00; /* Dark orange */
+    border-color: #FF8C00;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.login-to-cart-btn:hover {
+    background-color: #E67300; /* Darker orange */
+    border-color: #E67300;
+}
+
+/* Red button for "Yes, remove it!" */
+.swal2-confirm.btn-danger {
+    background-color: red !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    border-radius: 0.25rem !important;
+}
+.swal2-confirm.btn-danger:hover {
+    background-color: darkred !important; /* Darker red on hover */
+}
+
+/* Blue button for "Cancel" */
+.swal2-cancel.btn-primary {
+    background-color: blue !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    border-radius: 0.25rem !important;
+}
+.swal2-cancel.btn-primary:hover {
+    background-color: darkblue !important; /* Darker blue on hover */
+}
+
+.swal2-buttons-spacing {
+    display: flex;
+    justify-content: space-between; /* Add space between buttons */
+    gap: 10px; /* Adjust the gap between buttons */
+}
+
+/* Default state (not clicked) */
+.accordion-button {
+    background-color: darkblue !important;
+    color: white !important;
+    border: none;
+}
+
+/* Active state (clicked) */
+.accordion-button:not(.collapsed) {
+    background-color: blue !important;
+    color: white !important;
+    border: none;
+}
+
+/* Remove focus outline */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
