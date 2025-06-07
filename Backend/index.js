@@ -47,6 +47,7 @@ app.use(cors({
   credentials: true,
 }));
 
+
 // app.use(cors(corsOptions));
 
 //[SECTION] Backend Routes 
