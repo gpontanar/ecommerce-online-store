@@ -28,17 +28,23 @@ app.use(express.urlencoded({extended:true}));
 // Port:
 const port = 3000;
 
-const corsOptions = {
-	// Allow request from this origin (the client's URL) the origin is in array form if there are multiple origins
+		// const corsOptions = {
+		// 	// Allow request from this origin (the client's URL) the origin is in array form if there are multiple origins
 
-	// origin: ['http://localhost:8000','http://zuitt-bootcamp-prod-521-8525-pontanar.s3-website.us-east-1.amazonaws.com'],
-	origin: ['http://localhost:8000','https://your-frontend.vercel.app'],
-	// origin: ['http://localhost:3000'],
-	// Allow only specified HTTP methods, optional only if you want to restrict the methods
-	// methods: ['GET', 'POST'],
-	credentials: true,
-	optionsSuccessStatus: 200
-}
+		// 	// origin: ['http://localhost:8000','http://zuitt-bootcamp-prod-521-8525-pontanar.s3-website.us-east-1.amazonaws.com'],
+		// 	origin: ['http://localhost:8000','https://your-frontend.vercel.app'],
+		// 	// origin: ['http://localhost:3000'],
+		// 	// Allow only specified HTTP methods, optional only if you want to restrict the methods
+		// 	// methods: ['GET', 'POST'],
+		// 	credentials: true,
+		// 	optionsSuccessStatus: 200
+		// }
+
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 
 app.use(cors(corsOptions));
 
