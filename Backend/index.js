@@ -47,7 +47,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 //[SECTION] Backend Routes 
 // app.use("/b5/users", userRoutes);
