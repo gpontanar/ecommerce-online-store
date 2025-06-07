@@ -49,8 +49,13 @@ export default function UserOrders() {
         ];
 
         // Fetch product names
+        // const productFetches = uniqueProductIds.map(id =>
+        //   fetch(`http://ec2-18-217-117-56.us-east-2.compute.amazonaws.com/b5/products/${id}`)
+        //     .then(res => res.json())
+        //     .catch(() => ({ _id: id, name: "Unknown Product" }))
+        // );
         const productFetches = uniqueProductIds.map(id =>
-          fetch(`http://ec2-18-217-117-56.us-east-2.compute.amazonaws.com/b5/products/${id}`)
+          fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${id}`)
             .then(res => res.json())
             .catch(() => ({ _id: id, name: "Unknown Product" }))
         );
