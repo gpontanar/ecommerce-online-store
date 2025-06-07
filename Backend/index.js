@@ -54,10 +54,10 @@ app.use(cors(corsOptions));
 // app.use("/b5/orders", orderRoutes);
 // app.use("/b5/cart", cartRoutes);
 
-app.use("/b5/users", userRoutes);
-app.use("/b5/products", productRoutes);
-app.use("/b5/orders", orderRoutes);
-app.use("/b5/cart", cartRoutes);
+app.use("/users", userRoutes);
+app.use("/products", productRoutes);
+app.use("/orders", orderRoutes);
+app.use("/cart", cartRoutes);
 
 if(require.main === module){
 	app.listen(process.env.PORT || port, () => console.log(`Server running at port ${process.env.PORT || port}`));
