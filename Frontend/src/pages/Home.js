@@ -13,7 +13,7 @@ export default function Home() {
         return (
             <Row>
                 <Col className="mt-5 pt-5 text-center mx-auto">
-                    <h1>The Zuitt Shop</h1>
+                    <h1>Tech Supplies PH</h1>
                     <p>Products for everyone, everywhere</p>
                 
                     <button 
