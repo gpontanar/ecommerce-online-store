@@ -11,7 +11,7 @@ export default function AppNavbar() {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
             <Container fluid>
-                <Navbar.Brand as={Link} to="/">Tech Supplies PH</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">TechSuppliesPH</Navbar.Brand>
                 <Nav.Link as={NavLink} to={user.isAdmin ? "/product" : "/product"} style={{ color: 'white' }}>
                     {user.isAdmin ? "Admin Dashboard" : "Products"}
                 </Nav.Link>
